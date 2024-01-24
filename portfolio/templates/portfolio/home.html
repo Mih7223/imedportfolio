@@ -1,0 +1,10 @@
+<<h1>portfolio de imed</h1>
+
+{% for projet in projets %}
+<h2>{{ projet.titre }}</h2>
+<p>{{ projet.description }}</p>
+<img src=" {{ projet.image.url }}" height="100" width="100">
+{% if projet.url %}
+<a href="{{ projet.url }}">lien</a>
+{% endif %}
+{% endfor %}
